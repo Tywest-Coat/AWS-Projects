@@ -50,7 +50,7 @@ This project includes:
 
 ## 📋 Architecture Diagram  
 
-*(Optional: Add an architecture diagram here to visually depict the components and interactions.)*  
+AWS-Cloud-Resume/awscloudresumechallenge.png 
 
 ---
 
