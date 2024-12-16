@@ -50,7 +50,7 @@ This project includes:
 
 ## 📋 Architecture Diagram  
 
-![AWS-Cloud-Resume/awscloudresumechallenge.png ](https://github.com/Tywest-Coat/AWS-Projects/blob/main/AWS-Cloud-Resume/awscloudresumechallenge.png)
+![AWS-Cloud-Resume/awscloudresumechallenge.png ](https://github.com/Tywest-Coat/AWS-Projects/blob/main/AWS-Cloud-Resume/awscloudresumechallenge1.png)
 
 ---
 
