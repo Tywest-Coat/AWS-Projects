@@ -78,24 +78,6 @@ The main goals of this project are:
 ## 🛠️ Technologies Used  
 
 - **Amazon PartyRock**: The AI platform used to generate the app.  
-- **AWS Services**: Services like Amazon S3, Lambda, API Gateway, etc., are suggested based on the project input.  
 
 ---
 
-## 🔮 Future Enhancements  
-
-- 🔒 Add authentication features for users to save their projects.  
-- 📈 Integrate the app with AWS CloudFormation templates to automatically generate infrastructure code for the project.  
-- 🌐 Expand the learning goal categories to cover more advanced cloud topics and services.  
-
----
-
-## 📫 Contact  
-
-- **Portfolio Website**: [Insert your personal website URL]  
-- **LinkedIn**: [Insert your LinkedIn profile URL]  
-- **GitHub**: [Insert your GitHub profile URL]  
-
----
-
-Feel free to fork, contribute, or open issues if you have ideas for improvement! 💬  
