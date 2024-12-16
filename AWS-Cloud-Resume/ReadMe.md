@@ -115,7 +115,7 @@ This project includes:
 
 ---
 
-## 👟 Issues I Ran Into  
+## 😤 Issues I Ran Into  
 
 -  ❌ Invalidation of CloudFront cache after GitHub Repo modification.
   
