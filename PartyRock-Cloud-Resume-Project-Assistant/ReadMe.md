@@ -44,12 +44,12 @@ Below are screenshots of the app in action:
 ### Input Section  
 This is where the user enters their project details, including project name, description, and learning goals.  
 
-![Input Boxes](images/input-boxes.png)  
+![Input Boxes]([images/input-boxes.png](https://github.com/Tywest-Coat/AWS-Projects/blob/main/PartyRock-Cloud-Resume-Project-Assistant/inputboxes.png))  
 
 ### Output Section  
 After entering the details, the app generates a list of relevant AWS services, a project overview, and suggested steps for completion.  
 
-![Output Boxes](images/output-boxes.png)  
+![Output Boxes]([images/output-boxes.png](https://github.com/Tywest-Coat/AWS-Projects/blob/main/PartyRock-Cloud-Resume-Project-Assistant/outputboxes.png))  
 
 ---
 
