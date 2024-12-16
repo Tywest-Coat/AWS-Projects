@@ -115,11 +115,10 @@ This project includes:
 
 ---
 
-## 🚀 Future Enhancements  
+## 👟 Issues I Ran Into  
 
-- 🔐 Add user authentication to personalize the website experience.  
-- 📈 Implement analytics to gather insights into visitor behavior.  
-- 🧪 Explore more advanced CI/CD workflows with additional testing phases.  
+-  ❌ Invalidation of CloudFront cache after GitHub Repo modification.
+  
 
 ---
 
