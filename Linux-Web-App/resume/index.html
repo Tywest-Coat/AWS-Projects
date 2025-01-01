@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyler Westcoat Resume</title>
+    
+    <!-- Embedded CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .resume {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        .sectionTitle {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        h3 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .job p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            margin-bottom: 15px;
+        }
+
+        .bar {
+            width: 100%;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+        }
+
+        .fill {
+            display: block;
+            height: 100%;
+            background-color: #4caf50;
+            width: 0;
+            transition: width 1s ease;
+        }
+
+        /* Positioning the toggle button to the left of the resume */
+        .theme-toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling the label next to the toggle */
+        .toggle-label {
+            margin-left: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Dark mode styling for the toggle label */
+        .dark-mode .toggle-label {
+            color: #e0e0e0;
+        }
+
+        /* The switch - make it smaller */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 24px;
+        }
+
+        .theme-toggle-container {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+
+        /* Hide the checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 24px;
+        }
+
+        /* The circle inside the slider */
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        /* Dark Mode Color */
+        input:checked+.slider {
+            background-color: #4caf50;
+        }
+
+        /* Move the circle to the right */
+        input:checked+.slider:before {
+            transform: translateX(16px);
+        }
+
+        /* Add a shadow to the slider */
+        .slider {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dark mode styling (unchanged) */
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .resume {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-mode h1,
+        .dark-mode h3,
+        .dark-mode h4 {
+            color: #f4f4f4;
+        }
+
+        .dark-mode p,
+        .dark-mode ul li {
+            color: #d0d0d0;
+        }
+
+        /* Visitor Counter Styles */
+        /* Dark mode styling for the counter box */
+        .dark-mode .counter-box {
+            background-color: #333;  /* Dark background */
+            color: #e0e0e0;          /* Light text color */
+            border: 2px solid #666;  /* Lighter border for contrast */
+        }
+
+        .counter-box {
+            position: fixed;
+            top: 50px;
+            left: 10px;
+            padding: 8px;  /* Reduced padding */
+            border: 2px solid #333;
+            border-radius: 6px;  /* Slightly smaller border radius */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 14px;  /* Reduced font size */
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 6px;  /* Reduced gap */
+        }
+        .counter-number {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #007BFF;
+            border-radius: 50%;
+            width: 16px;  /* Smaller spinner size */
+            height: 16px;  /* Smaller spinner size */
+            animation: spin 1s linear infinite;
+            display: none; /* Hide spinner initially */
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme toggle container -->
+    <div class="theme-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Dark Mode</span>
+    </div>
+
+    <!-- Resume Content -->
+    <div class="resume">
+        <header>
+            <h1>Tyler Westcoat</h1>
+            <p>Orlando, FL</p>
+            <p>(772) 267-5894 | <a href="mailto:twestcoat@outlook.com">twestcoat@outlook.com</a></p>
+            <p><a href="http://www.linkedin.com/in/tyler-westcoat-871502204" target="_blank">LinkedIn</a> | <a href="https://github.com/Tywest-Coat?tab=repositories" target="_blank">GitHub</a></p>
+        </header>
+
+        <section class="section">
+            <h2>Technical Projects</h2>
+            <ul>
+                <li><strong>Cloud Resume Challenge:</strong> Developed and deployed a fully automated, secure, and interactive resume website using AWS services, JavaScript, Python, and CI/CD pipelines.</li>
+                <li><strong>AWS PartyRock:</strong> Cloud Project Planner.</li>
+                <li><strong>Amazon Lex:</strong> Language Translation Bot.</li>
+                <li><strong>Amazon Rekognition:</strong> Image Label Generator.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <p><strong>University of Central Florida</strong></p>
+            <p>Bachelor of Science Degree in Information Technology | Aug 2019 – Aug 2022</p>
+        </section>
+
+        <section class="section">
+            <h2>Experience</h2>
+
+            <div class="job">
+                <h3>BNY, Lake Mary, FL</h3>
+                <p>Application Support Analyst | November 2024 - Current</p>
+                <ul>
+                    <li>Ensured system availability and reliability by managing monitoring, automation, and defect prevention strategies maintaining company SLA.</li>
+                    <li>Conducted root cause analysis for complex production issues and collaborated with developers on CI/CD solutions.</li>
+                    <li>Delivered timely resolutions to high-priority issues, including weekend availability to support critical services.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>JST Power Equipment, Lake Mary, FL</h3>
+                <p>IT Engineer | March 2022 - September 2024</p>
+                <ul>
+                    <li>Provided comprehensive help desk support, troubleshooting software, hardware, and connectivity issues for 120 employees.</li>
+                    <li>Developed automation scripts to enhance asset management, reducing manual workloads by 30%.</li>
+                    <li>Managed Azure Active Directory through Office 365 Admin Portal, creating ~60 new user accounts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>AWS Certified Solutions Architect Associate</li>
+                <li>CompTIA Security+</li>
+                <li>CompTIA Network+</li>
+                <li>CompTIA A+</li>
+                <li>Google Cybersecurity Professional</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>Cloud Platforms (AWS)</li>
+                <li>Windows Administration & Troubleshooting</li>
+                <li>Security</li>
+                <li>Networking</li>
+                <li>Python</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Collaboration & Communication</li>
+                <li>Problem Solver</li>
+                <li>Quick & Eager to Learn</li>
+                <li>Attention to Detail</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Visitor Counter -->
+    <div class="counter-box">
+        <span class="counter-number">Visitors:</span>
+        <span id="visitorCount">0</span>
+        <div class="spinner" id="spinner"></div>
+    </div>
+
+    <script>
+        // Function to fetch visitor count from API
+        async function fetchVisitorCount() {
+            const spinner = document.getElementById('spinner');
+            spinner.style.display = 'block'; // Show spinner
+            
+            try {
+                const apiUrl = 'https://90vtcz14yi.execute-api.us-east-1.amazonaws.com/testing'; // Your API endpoint
+                const response = await fetch(apiUrl); // Fetch the data
+                
+                // Check if the response is OK (status code 200)
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json(); // Parse the JSON
+                
+                // Access the count
+                const visitorCount = data.body.count; // Access the 'count' property
+                console.log('Visitor Count:', visitorCount); // Log the visitor count
+                
+                // Update the DOM with the visitor count
+                document.getElementById('visitorCount').textContent = visitorCount;
+            } catch (error) {
+                console.error('Error fetching visitor count:', error);
+                document.getElementById('visitorCount').textContent = 'Error'; // Handle errors
+            } finally {
+                spinner.style.display = 'none'; // Hide spinner
+            }
+        }
+
+        // Call the function when the window loads
+        window.onload = fetchVisitorCount;
+
+        // Theme toggle functionality
+        const toggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
