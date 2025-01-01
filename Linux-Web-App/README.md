@@ -70,14 +70,16 @@ This project demonstrates the deployment of a Linux-based web application using 
 ## **Directory Structure**
 ```plaintext
 linux-web-app/
-├── main.tf            # Core infrastructure resources
-├── provider.tf        # AWS provider configuration
-├── variables.tf       # Input variable definitions
-├── outputs.tf         # Outputs for resources
-├── terraform.tfvars   # Variable values (optional, for sensitive values)
-├── data.tf            # Data sources (if applicable)
-├── locals.tf          # Local variables (optional)
-└── modules/           # Optional custom modules for reuse
+├── main.tf # Core infrastructure resources
+├── providers.tf # AWS provider configuration
+├── versions.tf # Terraform and provider versions
+├── variables.tf # Variable declarations
+├── outputs.tf # Output declarations
+├── networking.tf # Security group resources
+├── s3.tf # S3 bucket and website hosting
+├── iam.tf # IAM roles and policies
+├── compute.tf # EC2 and key pair resources
+└── terraform.tfvars # Variable values (git-ignored)
 ```
 
 ---
