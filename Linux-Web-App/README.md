@@ -89,13 +89,9 @@ If applicable, include an architecture diagram of the solution. You can use tool
     -   Check bucket policy
     -   Confirm permissions
 
-## 📄 License
-Include the license for your project (e.g., MIT, Apache-2.0). If none, just indicate "All Rights Reserved."
 
-## 💬 Contact
-Provide contact information or ways for others to reach out for questions or collaboration.
 
 ---
 
-**Created by [Your Name]**  
-[Your LinkedIn or Portfolio URL]
+**Created by Tyler Westcoat**  
+www.linkedin.com/in/tyler-westcoat-871502204
