@@ -65,6 +65,7 @@ linux-web-app/
     - Components:
         -local.vpc_id             # Referenced VPC
         -local.public_subnet_ids  # Public subnets for ALB and EC2 instances
+        
 4. **Security Groups**
 
   File: security.tf
