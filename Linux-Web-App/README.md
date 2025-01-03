@@ -39,8 +39,8 @@ linux-web-app/
 
 ## **Core Components**
 1. **Application Load Balancer (ALB)**
-   
-   File: alb.tf
+
+  File: alb.tf
    - Acts as the entry point for web traffic
    - Distributes incoming HTTP traffic across multiple EC2 instances
    - Components:
@@ -59,7 +59,7 @@ linux-web-app/
   - Integrates with ALB target group for traffic distribution
 3. **Networking**
 
-    File: vpc.tf
+  File: vpc.tf
     - Uses the default vpc, but can be configured to use a custom VPC in production environments
     - Utilizes public subnets across multiple AZs
     - Components:
@@ -74,12 +74,14 @@ linux-web-app/
 
 5. Web Application
 
-   - Static website content
-   - Features:
-       - Dark mode toggle
-       - Visitor counter integration
-       - Responsive design
-   - COnnects to API gateway for visitor counting functionality
+  - Static website content
+  - Features:
+     - Dark mode toggle
+     - Visitor counter integration
+     - Responsive design
+  - Connects to API gateway for visitor counting functionality
+
+
 
 ## 🚀 Getting Started
 1. **Prerequisites**: 
