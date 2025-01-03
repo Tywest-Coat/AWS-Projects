@@ -1,4 +1,4 @@
-# 🌟 Linux-Based Web Application on AWS (Terraform)
+# 🌟 Highly Available Linux-Based Web Application on AWS (Terraform)
 
 ## 📜 Overview
 This project demonstrates the deployment of a highly available and scalable Linux-based web application using Terraform to provision and manage AWS resources. The infrastructure includes an application load balancer connected to an autoscaling group which scales out web servers when needed based on CloudWatch alarms. 
@@ -17,7 +17,7 @@ This project demonstrates the deployment of a highly available and scalable Linu
   - AWS CLI (AWS Management)
  
 ## ⚙️ Architecture Diagram
-If applicable, include an architecture diagram of the solution. You can use tools like Lucidchart or draw it directly in Markdown using an image.
+![AWS-Cloud-Resume/awscloudresumechallenge.png ](https://github.com/Tywest-Coat/AWS-Projects/blob/main/Linux-Web-App/availablelinuxwebappwhitebg.png)
 
 ## **Directory Structure**
 ```plaintext
