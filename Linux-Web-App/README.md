@@ -60,11 +60,11 @@ linux-web-app/
 3. **Networking**
 
   File: vpc.tf
-    - Uses the default vpc, but can be configured to use a custom VPC in production environments
-    - Utilizes public subnets across multiple AZs
-    - Components:
-        -local.vpc_id             # Referenced VPC
-        -local.public_subnet_ids  # Public subnets for ALB and EC2 instances
+  - Uses the default vpc, but can be configured to use a custom VPC in production environments
+  - Utilizes public subnets across multiple AZs
+  - Components:
+    - local.vpc_id             # Referenced VPC
+    - local.public_subnet_ids  # Public subnets for ALB and EC2 instances
         
 4. **Security Groups**
 
