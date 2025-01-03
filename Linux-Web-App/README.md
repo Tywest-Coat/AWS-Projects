@@ -40,7 +40,7 @@ linux-web-app/
 ## **Core Components**
 1. **Application Load Balancer (ALB)**
 
-  File: alb.tf
+    File: alb.tf
    - Acts as the entry point for web traffic
    - Distributes incoming HTTP traffic across multiple EC2 instances
    - Components:
@@ -51,7 +51,7 @@ linux-web-app/
    - Routes traffic to instances that respond with HTTP 200 on path "/"
 2. **Auto Scaling Group (ASG)**
 
-  File: asg.tf
+    File: asg.tf
   - Manages EC2 instances automatically
   - Ensures high availability across multiple AZs
   - Uses a launch template to create standardized instances
@@ -59,7 +59,7 @@ linux-web-app/
   - Integrates with ALB target group for traffic distribution
 3. **Networking**
 
-  File: vpc.tf
+    File: vpc.tf
   - Uses the default vpc, but can be configured to use a custom VPC in production environments
   - Utilizes public subnets across multiple AZs
   - Components:
@@ -68,7 +68,7 @@ linux-web-app/
         
 4. **Security Groups**
 
-  File: security.tf
+    File: security.tf
   - Controls inbound/outbound traffic
   - ALB security group allows HTTP (port 80) from internet
   - EC2 instances security group allows traffic from ALB
