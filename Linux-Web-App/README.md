@@ -1,11 +1,12 @@
 # 🌟 Linux-Based Web Application on AWS (Terraform)
 
 ## 📜 Overview
-This project demonstrates the deployment of a Linux-based web application using Terraform to provision and manage AWS resources. The infrastructure includes an EC2 instance running Amazon Linux 2 and an S3 bucket for static website hosting, secured by appropriate IAM roles and security groups, following AWS Well-Architected Framework best practices.
+This project demonstrates the deployment of a highly available and scalable Linux-based web application using Terraform to provision and manage AWS resources. The infrastructure includes an application load balancer connected to an autoscaling group which scales out web servers when needed based on CloudWatch alarms. 
 
 ## 🔧 Technologies Used
 - **AWS Services**: 
-  - EC2 (Compute)
+  - Application Load Balancer (Load Balancing)
+  - EC2 Autoscaling group (Auto Scaling EC2 Instances)
   - S3 (Static Website Hosting)
   - IAM (Access Management)
   - Security Groups (Network Security)
@@ -14,10 +15,17 @@ This project demonstrates the deployment of a Linux-based web application using 
 - **Other Tools**:
   - Git (Version Control)
   - AWS CLI (AWS Management)
+ 
+- ## ⚙️ Architecture Diagram
+If applicable, include an architecture diagram of the solution. You can use tools like Lucidchart or draw it directly in Markdown using an image.
 
 ## **Directory Structure**
 ```plaintext
 linux-web-app/
+├── alb.tf # Application Load Balancer resources
+├── asg.tf # Autoscaling Group resources
+├── security.tf # Security groups configuration
+├── vpc.tf # VPC configuration
 ├── providers.tf # AWS provider configuration
 ├── versions.tf # Terraform and provider versions
 ├── variables.tf # Variable declarations
@@ -29,8 +37,49 @@ linux-web-app/
 └── terraform.tfvars # Variable values (git-ignored)
 ```
 
-## ⚙️ Architecture Diagram
-If applicable, include an architecture diagram of the solution. You can use tools like Lucidchart or draw it directly in Markdown using an image.
+## **Core Components**
+1. **Application Load Balancer (ALB)**
+   
+   File: alb.tf
+   - Acts as the entry point for web traffic
+   - Distributes incoming HTTP traffic across multiple EC2 instances
+   - Components:
+     - aws_lb "web_app"               # The load balancer itself
+     - aws_lb_target_group "web_app"  # Group of targets (EC2 instances)
+     - aws_lb_listener "web_app"      # Listens on port 80 (HTTP)
+   - Health checks configured to verify instance health every 30 seconds
+   - Routes traffic to instances that respond with HTTP 200 on path "/"
+2. **Auto Scaling Group (ASG)**
+
+  File: asg.tf
+  - Manages EC2 instances automatically
+  - Ensures high availability across multiple AZs
+  - Uses a launch template to create standardized instances
+  - Scales based on defined metrics and policies
+  - Integrates with ALB target group for traffic distribution
+3. **Networking**
+
+    File: vpc.tf
+    - Uses the default vpc, but can be configured to use a custom VPC in production environments
+    - Utilizes public subnets across multiple AZs
+    - Components:
+        -local.vpc_id             # Referenced VPC
+        -local.public_subnet_ids  # Public subnets for ALB and EC2 instances
+4. **Security Groups**
+
+  File: security.tf
+  - Controls inbound/outbound traffic
+  - ALB security group allows HTTP (port 80) from internet
+  - EC2 instances security group allows traffic from ALB
+
+5. Web Application
+
+   - Static website content
+   - Features:
+       - Dark mode toggle
+       - Visitor counter integration
+       - Responsive design
+   - COnnects to API gateway for visitor counting functionality
 
 ## 🚀 Getting Started
 1. **Prerequisites**: 
