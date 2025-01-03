@@ -17,7 +17,7 @@ This project demonstrates the deployment of a highly available and scalable Linu
   - AWS CLI (AWS Management)
  
 ## ⚙️ Architecture Diagram
-![AWS-Cloud-Resume/awscloudresumechallenge.png ](https://github.com/Tywest-Coat/AWS-Projects/blob/main/Linux-Web-App/availablelinuxwebappwhitebg.png)
+![AWS-Cloud-Resume/awscloudresumechallenge.png ](https://github.com/Tywest-Coat/AWS-Projects/blob/main/Linux-Web-App/availablelinuxwebappwhite.png)
 
 ## **Directory Structure**
 ```plaintext
