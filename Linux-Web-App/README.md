@@ -37,7 +37,7 @@ linux-web-app/
 └── terraform.tfvars # Variable values (git-ignored)
 ```
 
-## **Core Components**
+## 🧩**Core Components**
 1. **Application Load Balancer (ALB)**
 
     File: alb.tf
