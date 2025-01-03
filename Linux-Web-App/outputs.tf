@@ -1,11 +1,11 @@
-# EC2 Public IP
-output "ec2_public_ip" {
-  description = "Public IP of the EC2 instance"
-  value       = aws_instance.web_app.public_ip
+# outputs.tf
+
+output "alb_dns_name" {
+  description = "DNS name of the Application Load Balancer"
+  value       = aws_lb.web_app.dns_name
 }
 
-# Security Group ID
-output "security_group_id" {
-  description = "ID of the Security Group"
-  value       = aws_security_group.web_app_sg.id
+output "asg_name" {
+  description = "Name of the Auto Scaling Group"
+  value       = aws_autoscaling_group.web_app.name
 }

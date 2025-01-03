@@ -1,6 +1,6 @@
 # Create an S3 bucket to host the static website content
 resource "aws_s3_bucket" "website_bucket" {
-  bucket = "my-website-bucket-1352525"
+  bucket = var.bucket_name
 
   # Configure the bucket for static website hosting
   website {
