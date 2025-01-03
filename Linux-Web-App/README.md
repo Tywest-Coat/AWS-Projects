@@ -16,7 +16,7 @@ This project demonstrates the deployment of a highly available and scalable Linu
   - Git (Version Control)
   - AWS CLI (AWS Management)
  
-- ## ⚙️ Architecture Diagram
+## ⚙️ Architecture Diagram
 If applicable, include an architecture diagram of the solution. You can use tools like Lucidchart or draw it directly in Markdown using an image.
 
 ## **Directory Structure**
