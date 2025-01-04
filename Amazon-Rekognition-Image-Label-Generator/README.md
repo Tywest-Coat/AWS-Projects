@@ -51,9 +51,13 @@ Common issues and solutions:
 3. Rekognition service access denied
 
     - Solution: Verify IAM policies
-## 💡 Features
+
+## 💡 Application Overview
+
+- GUI Application Before Input ![Amazon-Rekognition-Image-Label-Generator/Images/appInitialStateOrigin.png ](https://github.com/Tywest-Coat/AWS-Projects/blob/main/Amazon-Rekognition-Image-Label-Generator/Images/appInitialStateOrigin.png)
+
+- GUI Application After Input ![Amazon-Rekognition-Image-Label-Generator/Images/appStatePost.png ](https://github.com/Tywest-Coat/AWS-Projects/blob/main/Amazon-Rekognition-Image-Label-Generator/Images/appStatePost.png)
+
 
 ---
 
-**Created by Tyler Westcoat**  
-www.linkedin.com/in/tyler-westcoat-871502204
