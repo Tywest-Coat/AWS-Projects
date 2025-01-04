@@ -4,6 +4,8 @@ This project showcases a cloud-based implementation of my resume, which is deplo
 
 ---
 
+**[Link to Resume](https://resume.tylerwestcoat.com)**  
+
 ## 🛠️ Project Overview  
 
 This project includes:  
@@ -15,6 +17,7 @@ This project includes:
   - **Dark Mode Toggle Widget** for an improved user experience.  
 - 💻 Backend logic written in **Python** using **AWS Lambda**, integrated with **AWS API Gateway** for secure database interactions.  
 - 🚀 Source control and CI/CD pipelines implemented with **GitHub Actions** for both frontend and backend development.  
+
 
 ---
 
