@@ -61,5 +61,3 @@ Common issues and solutions:
 
 ---
 
-**Created by Tyler Westcoat**  
-www.linkedin.com/in/tyler-westcoat-871502204
