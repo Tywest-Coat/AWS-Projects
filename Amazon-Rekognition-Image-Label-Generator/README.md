@@ -35,3 +35,25 @@ image-labels-generator/
 
 ## ⚙️ Architecture Diagram
 ![Amazon-Rekognition-Image-Label-Generator/Images/amazonRekognitionDiagram.png ](https://github.com/Tywest-Coat/AWS-Projects/blob/main/Amazon-Rekognition-Image-Label-Generator/Images/amazonRekognitionDiagram.png)
+
+## 🔧 Troubleshooting
+
+Common issues and solutions:
+
+1. AWS Credentials not found
+
+    - Solution: Verify AWS CLI configuration
+
+2. S3 bucket access denied
+
+    - Solution: Check IAM permissions
+
+3. Rekognition service access denied
+
+    - Solution: Verify IAM policies
+## 💡 Features
+
+---
+
+**Created by Tyler Westcoat**  
+www.linkedin.com/in/tyler-westcoat-871502204
